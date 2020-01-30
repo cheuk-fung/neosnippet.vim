@@ -246,11 +246,6 @@ function! s:SID_PREFIX() abort
 endfunction
 
 function! neosnippet#mappings#_trigger(function) abort
-  if g:neosnippet#enable_complete_done && pumvisible()
-        \ && neosnippet#mappings#expandable()
-      return ''
-  endif
-
   if !neosnippet#mappings#expandable_or_jumpable()
     return ''
   endif
